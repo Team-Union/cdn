@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	        <!-- 
+	        아래 title 태그에 타이틀을 적어 주세요.
+	        ex) <title>Insert Title Here</title>
+	        -->
+		<title>Insert Title Here</title>
+	        <!-- 
+	        아래 css는 저장한 위치에 따라 자유롭게 수정 가능합니다.
+	        ex) <link rel="stylesheet" href="css/loading.css" />
+	        -->
+		<link rel="stylesheet" href="css/loading.css" />
+	        <!-- 
+	        아래 js는 저장한 위치에 따라 자유롭게 수정 가능합니다.
+	        ex) <script src="./js/jquery-3.5.1.min.js"></script>
+	        -->
+		<script src="./js/jquery-3.5.1.min.js"></script>
+	</head>
+	<body>
+	    <div id="loading" class="loading">
+	        <span>1</span>
+	        <span>2</span>
+	        <span>3</span>
+	        <span>4</span>
+	    </div>
+	    
+        <section class="contents">
+	    <!-- 
+	    아래 iframe 태그에 로딩 후 보일 HTML을 링크해 주세요.
+	    ex) <iframe src="./next.html">
+	    -->
+            <iframe src="./next.html">
+        </section>
+	<!-- 
+	아래 스트립트는 꼭 보존해 주세요.
+	-->
+        <script>
+            $(window).on('load', function() {
+                setInterval(function() {
+                    $('#loading').fadeOut(350);
+                    $('.contents').addClass('active');   
+                }, 2000)
+            });
+        </script>
+	</body>
+</html>
